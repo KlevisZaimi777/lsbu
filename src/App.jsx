@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
-import { AuthProvider, useAuth } from '../context/AuthContext';
-import Login from '../pages/Login';
+import { AuthProvider, useAuth } from './context/AuthContext';
+import Login from './pages/Login';
 import MainLayout from './components/Layout/MainLayout';
-import TaskBoard from '../components/Task/TaskBoard';
+import TaskBoard from './components/Task/TaskBoard';
 import Profile from './components/Profile';
 
 // Protected route component
