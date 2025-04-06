@@ -1,27 +1,27 @@
 {
   "include": [
-    "**/*",
-    "**/.server/**/*",
-    "**/.client/**/*",
-    ".react-router/types/**/*"
+    "src/**/*",                        // Include only the src folder and relevant subfolders
+    ".react-router/types/**/*",        // Include react-router types
+    ".server/**/*",                    // Include server folder
+    ".client/**/*"                     // Include client folder
   ],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2022"],
-    "types": ["node", "vite/client"],
-    "target": "ES2022",
-    "module": "ES2022",
-    "moduleResolution": "bundler",
-    "jsx": "react-jsx",
+    "types": ["node", "vite/client", "react", "react-dom"],  // Add React types
+    "target": "ES2022", 
+    "module": "ES2022", 
+    "moduleResolution": "bundler",   // Use bundler resolution (good for Vite)
+    "jsx": "react-jsx",              // React 17 JSX transform
     "rootDirs": [".", "./.react-router/types"],
-    "baseUrl": ".",
+    "baseUrl": ".",                  // Base URL for module resolution
     "paths": {
-      "~/*": ["./app/*"]
+      "~/*": ["./app/*"]              // Alias for app directory
     },
-    "esModuleInterop": true,
-    "verbatimModuleSyntax": true,
-    "noEmit": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "strict": true
+    "esModuleInterop": true,           // Allow interop with ESModules
+    "verbatimModuleSyntax": true,      // Keep original module syntax
+    "noEmit": true,                   // Don't emit files (Vite handles this)
+    "resolveJsonModule": true,         // Enable importing of JSON modules
+    "skipLibCheck": true,             // Skip checking of library types (for performance)
+    "strict": true                    // Enable strict type checking
   }
 }
