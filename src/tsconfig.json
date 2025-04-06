@@ -1,25 +1,21 @@
 {
   "include": [
-    "src/**/*",                        // Include only the src folder and relevant subfolders
-    ".react-router/types/**/*"         // Include react-router types if necessary
+    "src/**/*"  // Include only the src folder and relevant subfolders
   ],
   "compilerOptions": {
-    "lib": ["DOM", "DOM.Iterable", "ES2022"],  // Add necessary libraries for modern browsers
-    "types": ["node", "vite/client", "react", "react-dom"], // Include node, Vite, React types
-    "target": "ES2022", // Specify the ECMAScript target version
-    "module": "ES2022",  // Use modern module syntax
-    "moduleResolution": "bundler",  // Use Vite's bundler resolution for modules
+    "lib": ["DOM", "DOM.Iterable", "ES2022"],  // Necessary libraries for modern browsers
+    "types": ["node", "vite/client", "react", "react-dom"],  // Include types for node, Vite, and React
+    "target": "ES2022",  // Set the ECMAScript target version
+    "module": "ES2022",  // Use modern ES modules
+    "moduleResolution": "bundler",  // Vite uses bundler resolution for modules
     "jsx": "react-jsx",  // Enable React 17 JSX transform
-    "rootDirs": [".", "./.react-router/types"], // Root directories for module resolution
-    "baseUrl": ".", // Base URL for module resolution
-    "paths": {
-      "~/*": ["./app/*"] // Alias for app directory (adjust or remove if unnecessary)
-    },
-    "esModuleInterop": true, // Allow interop with ESModules
-    "verbatimModuleSyntax": true, // Retain original module syntax
-    "noEmit": true, // Don't emit any files, Vite handles this
-    "resolveJsonModule": true, // Enable JSON imports
-    "skipLibCheck": true, // Skip checking of types in libraries (performance improvement)
-    "strict": true // Enable strict type checking
+    "rootDirs": [".", "./.react-router/types"],  // Resolve modules from these directories
+    "baseUrl": ".",  // Base URL for module resolution
+    "esModuleInterop": true,  // Allow interop with ESModules
+    "verbatimModuleSyntax": true,  // Retain original module syntax
+    "noEmit": true,  // TypeScript will not emit output files, Vite handles this
+    "resolveJsonModule": true,  // Enable importing JSON files
+    "skipLibCheck": true,  // Skip checking library types for performance
+    "strict": true  // Enable strict type-checking
   }
 }
